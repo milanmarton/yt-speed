@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "youtube speed control shortcut",
+  "version": "1.0",
+  "description": "Control YouTube video speed with keyboard shortcuts",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+
+  "commands": {
+    "speed-up": {
+      "suggested_key": {
+        "default": "Ctrl+Up"
+      },
+      "description": "Increase video speed"
+    },
+    "speed-down": {
+      "suggested_key": {
+        "default": "Ctrl+Down"
+      },
+      "description": "Decrease video speed"
+    }
+  }
+}
