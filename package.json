@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "uglify-js": "^3.19.3"
+  },
+  "scripts": {
+    "build:js": "uglifyjs content.js -o content.min.js",
+    "build:css": "cleancss styles.css -o styles.min.css",
+    "build": "npm run build:js && npm run build:css"
+  }
+}
